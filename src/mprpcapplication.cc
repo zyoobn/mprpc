@@ -17,7 +17,7 @@ bool MprpcApplication::IsInit() {
 
 void MprpcApplication::Init(int argc, char** argv) {
     if (is_init) {
-        std::cout << "Repeat init!" << std::endl;
+        // std::cout << "Repeat init!" << std::endl;
         return;
     }
     is_init = true;

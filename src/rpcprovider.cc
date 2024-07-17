@@ -88,8 +88,9 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr& connect,
     std::string recv_buf = buffer->retrieveAllAsString();
 
     // 从字符流中读取前4个字节的内容
-    uint32_t header_size = std::stoi(recv_buf.substr(0, 4), 0, 2);
-    // recv_buf.copy((char*)&header_size, 4, 0);
+    // uint32_t header_size = std::stoi(recv_buf.substr(0, 4), 0, 2);
+    uint32_t header_size = 0;
+    recv_buf.copy((char*)&header_size, 4, 0);
 
     // 根据header_size读取数据头的原始字符流
     std::string rpc_header_str = recv_buf.substr(4, header_size);
@@ -106,6 +107,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr& connect,
     } else {
         // 数据头反序列化失败
         std::cout << "rpc_header_str:" << rpc_header_str << " parse error!" << std::endl;
+        return;
     }
 
     // 获取rpc方法参数的字符流数据
