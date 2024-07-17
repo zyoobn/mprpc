@@ -346,6 +346,7 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcconfig.h \
  /home/zyoobn/code/c++_project/mprpc/src/rpcheader.pb.h \
  /usr/local/include/google/protobuf/extension_set.h \
- /usr/include/c++/11/cassert /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/cassert \
+ /home/zyoobn/code/c++_project/mprpc/example/user.pb.h \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h

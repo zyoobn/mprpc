@@ -95,16 +95,16 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     // 接受rpc请求的响应值
     char recv_buf[1024] = {0};
     int recv_size = 0;
-    if (recv(clientfd, recv_buf, 1024, 0) == -1) {
+    if ((recv_size = recv(clientfd, recv_buf, 1024, 0)) == -1) {
         std::cout << "recv error! errno:" << errno << std::endl;
         close(clientfd);
         return;
     }
 
-    // std::string response_str(recv_buf, 0, recv_size);
-    std::string response_str(recv_buf);
-    
-    if (response->ParseFromString(response_str)) {
+    // std::string response_str(recv_buf);
+    std::string response_str(recv_buf, 0, recv_size);
+
+    if (!response->ParseFromArray(recv_buf, recv_size)) {
         std::cout << "parse error! response_str:" << response_str << std::endl;
         close(clientfd);
         return;

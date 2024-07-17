@@ -18,7 +18,6 @@ int main(int argc, char** argv) {
     fixbug::LoginResponse response;
 
     // 发起rpc方法的调用 同步
-
     stub.Login(nullptr, &request, &response, nullptr); // RpcChannel -> RpcChannel::callMethod 集中来做所有rpc方法调用的参数序列化和网络发送
 
     // 一次rpc调用完成，读调用结果

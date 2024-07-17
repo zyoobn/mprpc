@@ -1,6 +1,7 @@
 #include "rpcprovider.h"
 #include "mprpcapplication.h"
 #include "rpcheader.pb.h"
+#include "user.pb.h"
 #include <cstdint>
 #include <functional>
 #include <google/protobuf/descriptor.h>
@@ -163,6 +164,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr& connect,
 // Closure的回调操作，用于序列化rpc的响应和网络发送
 void RpcProvider::SendRpcResponse(const muduo::net::TcpConnectionPtr& connect, google::protobuf::Message* response) {
     std::string response_str;
+
     if (response->SerializeToString(&response_str)) {
         // 序列化成功后，通过网络rpc方法执行的结果发送回rpc的调用方
         connect->send(response_str);

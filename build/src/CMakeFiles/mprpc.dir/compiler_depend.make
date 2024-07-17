@@ -1465,10 +1465,13 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: ../src/rpcprovider.cc \
   ../src/rpcheader.pb.h \
   /usr/local/include/google/protobuf/extension_set.h \
   /usr/include/c++/11/cassert \
+  ../example/user.pb.h \
   /usr/include/c++/11/thread \
   /usr/include/c++/11/bits/std_thread.h \
   /usr/include/c++/11/bits/this_thread_sleep.h
 
+
+../example/user.pb.h:
 
 /usr/local/include/muduo/net/TimerId.h:
 
