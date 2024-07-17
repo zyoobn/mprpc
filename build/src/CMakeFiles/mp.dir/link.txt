@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libmp.so -o ../../lib/libmp.so CMakeFiles/mp.dir/mprpcapplication.cc.o CMakeFiles/mp.dir/mprpcconfig.cc.o CMakeFiles/mp.dir/rpcprovider.cc.o   -L/home/zyoobn/code/c++_project/mprpc/lib 

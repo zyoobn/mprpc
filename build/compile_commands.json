@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/zyoobn/code/c++_project/mprpc/build/src",
+  "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/mprpc.dir/mprpcapplication.cc.o -c /home/zyoobn/code/c++_project/mprpc/src/mprpcapplication.cc",
+  "file": "/home/zyoobn/code/c++_project/mprpc/src/mprpcapplication.cc"
+},
+{
+  "directory": "/home/zyoobn/code/c++_project/mprpc/build/src",
+  "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/mprpc.dir/mprpcconfig.cc.o -c /home/zyoobn/code/c++_project/mprpc/src/mprpcconfig.cc",
+  "file": "/home/zyoobn/code/c++_project/mprpc/src/mprpcconfig.cc"
+},
+{
+  "directory": "/home/zyoobn/code/c++_project/mprpc/build/src",
+  "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -c /home/zyoobn/code/c++_project/mprpc/src/rpcheader.pb.cc",
+  "file": "/home/zyoobn/code/c++_project/mprpc/src/rpcheader.pb.cc"
+},
+{
+  "directory": "/home/zyoobn/code/c++_project/mprpc/build/src",
+  "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/mprpc.dir/rpcprovider.cc.o -c /home/zyoobn/code/c++_project/mprpc/src/rpcprovider.cc",
+  "file": "/home/zyoobn/code/c++_project/mprpc/src/rpcprovider.cc"
+},
+{
+  "directory": "/home/zyoobn/code/c++_project/mprpc/build/example/callee",
+  "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/provider.dir/userservice.cc.o -c /home/zyoobn/code/c++_project/mprpc/example/callee/userservice.cc",
+  "file": "/home/zyoobn/code/c++_project/mprpc/example/callee/userservice.cc"
+},
+{
+  "directory": "/home/zyoobn/code/c++_project/mprpc/build/example/callee",
+  "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/zyoobn/code/c++_project/mprpc/example/user.pb.cc",
+  "file": "/home/zyoobn/code/c++_project/mprpc/example/user.pb.cc"
+}
+]
