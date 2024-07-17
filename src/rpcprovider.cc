@@ -104,7 +104,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr& connect,
         args_size = rpcHeader.args_size();
 
     } else {
-        // 数据头反序硫化失败
+        // 数据头反序列化失败
         std::cout << "rpc_header_str:" << rpc_header_str << " parse error!" << std::endl;
     }
 
@@ -139,7 +139,7 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr& connect,
     // 生成rpc方法调用的请求request和响应response参数
     google::protobuf::Message* request = service->GetRequestPrototype(method).New();
     if (!request->ParseFromString(args_str)) {
-        std::cout << "request parse error, content" << args_str << std::endl;
+        std::cout << "request parse error, content:" << args_str << std::endl;
         return;
     }
     google::protobuf::Message* response = service->GetResponsePrototype(method).New();
