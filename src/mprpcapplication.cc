@@ -1,5 +1,4 @@
 #include "mprpcapplication.h"
-#include "mprpcconfig.h"
 #include <cstdlib>
 #include <iostream>
 #include <unistd.h>

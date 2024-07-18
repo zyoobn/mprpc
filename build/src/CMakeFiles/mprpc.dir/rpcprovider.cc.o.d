@@ -344,6 +344,8 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/local/include/muduo/net/TimerId.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcapplication.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcconfig.h \
+ /home/zyoobn/code/c++_project/mprpc/src/include/mprpcchannel.h \
+ /home/zyoobn/code/c++_project/mprpc/src/include/mprpccontroller.h \
  /home/zyoobn/code/c++_project/mprpc/src/rpcheader.pb.h \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/11/cassert \

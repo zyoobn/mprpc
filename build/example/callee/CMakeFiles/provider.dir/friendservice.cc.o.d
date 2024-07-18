@@ -258,6 +258,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: \
  /usr/include/c++/11/cassert /usr/local/include/google/protobuf/service.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcapplication.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcconfig.h \
+ /home/zyoobn/code/c++_project/mprpc/src/include/mprpcchannel.h \
+ /home/zyoobn/code/c++_project/mprpc/src/include/mprpccontroller.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/rpcprovider.h \
  /usr/local/include/muduo/net/Callbacks.h \
  /usr/local/include/muduo/base/Timestamp.h \

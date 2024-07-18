@@ -25,6 +25,11 @@
   "file": "/home/zyoobn/code/c++_project/mprpc/src/mprpcchannel.cc"
 },
 {
+  "directory": "/home/zyoobn/code/c++_project/mprpc/build/src",
+  "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/mprpc.dir/mprpccontroller.cc.o -c /home/zyoobn/code/c++_project/mprpc/src/mprpccontroller.cc",
+  "file": "/home/zyoobn/code/c++_project/mprpc/src/mprpccontroller.cc"
+},
+{
   "directory": "/home/zyoobn/code/c++_project/mprpc/build/example/callee",
   "command": "/usr/bin/c++  -I/home/zyoobn/code/c++_project/mprpc/src/include -I/home/zyoobn/code/c++_project/mprpc/example -g -o CMakeFiles/provider.dir/friendservice.cc.o -c /home/zyoobn/code/c++_project/mprpc/example/callee/friendservice.cc",
   "file": "/home/zyoobn/code/c++_project/mprpc/example/callee/friendservice.cc"

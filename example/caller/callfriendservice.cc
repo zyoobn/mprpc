@@ -1,5 +1,4 @@
 #include "mprpcapplication.h"
-#include "mprpcchannel.h"
 #include "friend.pb.h"
 #include <iostream>
 
@@ -14,18 +13,23 @@ int main(int argc, char** argv) {
 
     // rpc方法的响应
     fixbug::GetFriendsListResponse response;
+    MprpcController controller;
 
     // 发起rpc方法的调用 同步
-    stub.GetFriendsList(nullptr, &request, &response, nullptr); // RpcChannel -> RpcChannel::callMethod 集中来做所有rpc方法调用的参数序列化和网络发送
+    stub.GetFriendsList(&controller, &request, &response, nullptr); // RpcChannel -> RpcChannel::callMethod 集中来做所有rpc方法调用的参数序列化和网络发送
 
-    // 一次rpc调用完成，读调用结果
-    if (response.result().errcode() == 0) {
-        std::cout << "rpc GetFriendsList response success!" << std::endl;
-        for (int i = 0; i < response.frineds_size(); ++i) {
-            std::cout << "index:" << (i + 1) << " " << "name:" << response.frineds(i) << std::endl;
-        }
+    if (controller.Failed()) {
+        std::cout << controller.ErrorText() << std::endl;
     } else {
-        std::cout << "rpc GetFriendsList response:" << response.result().errmsg() << std::endl;
+        // 一次rpc调用完成，读调用结果
+        if (response.result().errcode() == 0) {
+            std::cout << "rpc GetFriendsList response success!" << std::endl;
+            for (int i = 0; i < response.frineds_size(); ++i) {
+                std::cout << "index:" << (i + 1) << " " << "name:" << response.frineds(i) << std::endl;
+            }
+        } else {
+            std::cout << "rpc GetFriendsList response:" << response.result().errmsg() << std::endl;
+        }
     }
     
     return 0;

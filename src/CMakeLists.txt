@@ -1,6 +1,12 @@
 # aux_source_directory(. SRC_LIST)
 
-set(SRC_LIST mprpcapplication.cc mprpcconfig.cc rpcheader.pb.cc rpcprovider.cc mprpcchannel.cc)
+set(SRC_LIST 
+    mprpcapplication.cc 
+    mprpcconfig.cc 
+    rpcheader.pb.cc 
+    rpcprovider.cc 
+    mprpcchannel.cc
+    mprpccontroller.cc)
 
 # # mprpc动态库
 # add_library(mprpc SHARED ${SRC_LIST})
