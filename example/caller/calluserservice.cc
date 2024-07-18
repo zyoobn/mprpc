@@ -27,5 +27,22 @@ int main(int argc, char** argv) {
         std::cout << "rpc login response:" << response.reslut().errmsg() << std::endl;
     }
 
+    // 演示调用远程发布的rpc方法Register
+
+    fixbug::RegisterRequest req;
+    req.set_id(2002); 
+    req.set_name("li si"); 
+    req.set_pwd("123456"); 
+
+    fixbug::RegisterResponse res;
+
+    stub.Register(nullptr, &req, &res, nullptr);
+
+    if (res.result().errcode() == 0) {
+        std::cout << "rpc register response:" << res.sucess() << std::endl;
+    } else {
+        std::cout << "rpc register response:" << res.result().errmsg() << std::endl;
+    }
+
     return 0;
 }

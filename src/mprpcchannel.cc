@@ -20,7 +20,6 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
                           google::protobuf::Message* response, 
                           google::protobuf::Closure* done) {
     const google::protobuf::ServiceDescriptor* service = method->service();
-    
     std::string service_name = service->name();
     std::string method_name = method->name();
 
