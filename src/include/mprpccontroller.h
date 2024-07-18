@@ -1,6 +1,7 @@
 #ifndef MPRPCCONTROLLER_H
 #define MPRPCCONTROLLER_H
 
+#include "logger.h"
 #include <string>
 #include <google/protobuf/service.h>
 

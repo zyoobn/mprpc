@@ -257,6 +257,12 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/11/cassert /usr/local/include/google/protobuf/service.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcapplication.h \
+ /home/zyoobn/code/c++_project/mprpc/src/include/logger.h \
+ /home/zyoobn/code/c++_project/mprpc/src/include/lockqueue.h \
+ /usr/include/c++/11/queue /usr/include/c++/11/deque \
+ /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
+ /usr/include/c++/11/bits/stl_queue.h \
+ /usr/include/c++/11/condition_variable \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcconfig.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpcchannel.h \
  /home/zyoobn/code/c++_project/mprpc/src/include/mprpccontroller.h \
@@ -347,4 +353,5 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: \
  /usr/local/include/muduo/net/EventLoop.h \
  /usr/local/include/muduo/base/Mutex.h \
  /usr/local/include/muduo/base/CurrentThread.h \
- /usr/local/include/muduo/net/TimerId.h
+ /usr/local/include/muduo/net/TimerId.h \
+ /home/zyoobn/code/c++_project/mprpc/src/include/logger.h

@@ -1,6 +1,7 @@
 #ifndef MPRPCCONFIG_H
 #define MPRPCCONFIG_H
 
+#include "logger.h"
 #include <string>
 #include <unordered_map>
 

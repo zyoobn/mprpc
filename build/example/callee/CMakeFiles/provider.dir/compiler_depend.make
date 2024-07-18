@@ -625,6 +625,14 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
   /usr/include/c++/11/cassert \
   /usr/local/include/google/protobuf/service.h \
   ../src/include/mprpcapplication.h \
+  ../src/include/logger.h \
+  ../src/include/lockqueue.h \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/c++/11/condition_variable \
   ../src/include/mprpcconfig.h \
   ../src/include/mprpcchannel.h \
   ../src/include/mprpccontroller.h \
@@ -723,7 +731,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
   /usr/local/include/muduo/net/EventLoop.h \
   /usr/local/include/muduo/base/Mutex.h \
   /usr/local/include/muduo/base/CurrentThread.h \
-  /usr/local/include/muduo/net/TimerId.h
+  /usr/local/include/muduo/net/TimerId.h \
+  ../src/include/logger.h
 
 
 /usr/local/include/muduo/net/TimerId.h:
@@ -840,6 +849,12 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
 
 ../src/include/mprpccontroller.h:
 
+/usr/include/c++/11/bits/deque.tcc:
+
+../src/include/lockqueue.h:
+
+../src/include/logger.h:
+
 ../example/callee/friendservice.cc:
 
 /usr/include/c++/11/cassert:
@@ -872,6 +887,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
 
 ../src/include/mprpcchannel.h:
 
+/usr/include/c++/11/deque:
+
 /usr/local/include/google/protobuf/generated_enum_reflection.h:
 
 /usr/local/include/google/protobuf/stubs/mutex.h:
@@ -899,6 +916,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
 /usr/include/c++/11/bits/parse_numbers.h:
 
 /usr/include/c++/11/ctime:
+
+/usr/include/c++/11/condition_variable:
 
 /usr/include/c++/11/ratio:
 
@@ -985,6 +1004,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
 /usr/include/c++/11/ext/concurrence.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/11/bits/stl_deque.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -1231,6 +1252,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -1545,6 +1568,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: ../example/callee/fri
 /usr/include/c++/11/memory:
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 

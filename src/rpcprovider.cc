@@ -29,6 +29,7 @@ void RpcProvider::NotifyService(google::protobuf::Service* service) {
     int methodCount = pserviceDesc->method_count();
     
     // std::cout << "service_name:" << service_name << std::endl;
+    LOG_INFO("service_name:%s", service_name.c_str());
 
     ServiceInfo service_info;
     for (int i = 0; i < methodCount; ++i) {

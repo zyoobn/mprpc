@@ -6,7 +6,8 @@ set(SRC_LIST
     rpcheader.pb.cc 
     rpcprovider.cc 
     mprpcchannel.cc
-    mprpccontroller.cc)
+    mprpccontroller.cc
+    logger.cc)
 
 # # mprpc动态库
 # add_library(mprpc SHARED ${SRC_LIST})

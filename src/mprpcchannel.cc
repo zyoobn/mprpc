@@ -1,5 +1,6 @@
 #include "mprpcapplication.h"
 #include "rpcheader.pb.h"
+#include "logger.h"
 #include <cstdlib>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -29,6 +30,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         args_size = args_str.size();
     } else {
         controller->SetFailed("serialize request error!");
+        LOG_ERR("serialize request error! %s:%s%d", __FILE__, __FUNCTION__, __LINE__);
         return;
     }
 
@@ -44,6 +46,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         header_size = rpc_header_str.size();
     } else {
         controller->SetFailed("serialize rpc header error!");
+        LOG_ERR("serialize rpc header error! %s:%s%d", __FILE__, __FUNCTION__, __LINE__);
         return;
     }
 
@@ -66,6 +69,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     int clientfd = socket(AF_INET, SOCK_STREAM, 0);
     if (clientfd == -1) {
         controller->SetFailed("create socket error! error:");
+        LOG_ERR("create socket error! error:%d %s:%s%d", errno, __FILE__, __FUNCTION__, __LINE__);
         return;
     }
 
@@ -81,6 +85,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         close(clientfd);
         std::string errtxt = "connect error! errno:" + std::to_string(errno);
         controller->SetFailed(errtxt);
+        LOG_ERR("connect error! errno:%d %s:%s%d", errno, __FILE__, __FUNCTION__, __LINE__);
         return;
     }
     
@@ -89,6 +94,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         close(clientfd);
         std::string errtxt = "send error! errno:" + std::to_string(errno);
         controller->SetFailed(errtxt);
+        LOG_ERR("send error! errno:%d %s:%s%d", errno, __FILE__, __FUNCTION__, __LINE__);
         return;
     }
 
@@ -99,6 +105,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         close(clientfd);
         std::string errtxt = "recv error! errno:" + std::to_string(errno);
         controller->SetFailed(errtxt);
+        LOG_ERR("recv error! errno:%d %s:%s%d", errno, __FILE__, __FUNCTION__, __LINE__);
         return;
     }
 
@@ -109,6 +116,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         close(clientfd);
         std::string errtxt = "parse error! errno:" + std::string(recv_buf);
         controller->SetFailed(errtxt);
+        LOG_ERR("parse error! errno:%d %s:%s%d", errno, __FILE__, __FUNCTION__, __LINE__);
         return;
     }
     close(clientfd);

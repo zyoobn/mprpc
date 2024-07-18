@@ -1,6 +1,7 @@
 #ifndef MPRPCAPPLICATION_H
 #define MPRPCAPPLICATION_H
 
+#include "logger.h"
 #include "mprpcconfig.h"
 #include "mprpcchannel.h"
 #include "mprpccontroller.h"

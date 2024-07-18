@@ -1,6 +1,7 @@
 #ifndef RPCPROVIDER_H
 #define RPCPROVIDER_H
 
+#include "logger.h"
 #include <google/protobuf/message.h>
 #include <google/protobuf/service.h>
 #include <muduo/net/Callbacks.h>
@@ -8,7 +9,6 @@
 #include <muduo/net/EventLoop.h>
 #include <muduo/net/InetAddress.h>
 #include <unordered_map>
-
 
 // 框架提供的专门服务发布rpc服务的网络对象类
 class RpcProvider {
